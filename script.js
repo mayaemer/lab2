@@ -85,6 +85,6 @@ document.getElementById('searchbox').addEventListener('keypress', function(){
 })
 
 document.getElementById('name').addEventListener('click', function(){
-    console.log(contactsArray);
+    console.log(contactsArray.sort());
 })
 

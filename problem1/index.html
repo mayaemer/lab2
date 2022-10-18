@@ -24,7 +24,7 @@
 
     </form>
 
-    <div id="error">
+    <div id="validationError">
         <p id="nameError"></p>
         <p id="numError"></p>
         <p id="emailError"></p>
@@ -33,16 +33,19 @@
     <form id="search">
 
         <label>Search contact by phone number</label>
-        <input type="text" id="searchbox" />
+        <input type="text" id="searchbox" onkeyup="search()"/>
 
     </form>
 
+    <div id="searchError">
+        <p>No results found</p>
+    </div>
     
     <h2>Contacts Summary</h2>
     <table id="contactsTable" class="sortable">
         <thead>
-            <tr>
-                <th id="name">Name</th>
+            <tr id="header">
+                <th id="nameHeader">Name</th>
                 <th>Mobile</th>
                 <th>Email</th>
             </tr>

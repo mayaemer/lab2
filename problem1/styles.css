@@ -1,0 +1,11 @@
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+#header {
+    background-color: white;
+}
+
+#searchError {
+    display: none;
+}
