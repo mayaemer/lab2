@@ -1,11 +1,3 @@
-let increment = (function(i) {
-    return function() {
-      i += 1;
-      return i;
-    }
-  }(0));
-  
-
 function validateName(name){
     if (/^[A-Za-z\s]{1,20}$/.test(name)) {
         return true;
@@ -84,17 +76,24 @@ document.getElementById('add').addEventListener('click', function(){
     let numErr = document.getElementById('numError');
     let emailErr = document.getElementById('emailError');
 
-    let arrayItem = [name, number, email]
-    contactsArray.push(arrayItem)
     
     document.getElementById('nameError').innerHTML = '';
     document.getElementById('numError').innerHTML = '';
     document.getElementById('emailError').innerHTML = '';
 
     if (validateName(name) == true && validateNumber(number) == true && validateEmail(email) == true){
-        let table = document.getElementById('tableBody');
         let contact = `<tr class='contactRow'><td class='name'>` + name + `</td> <td class='number'>` + number + `</td> <td class='email'>` + email+ `</td></tr>`
-        table.innerHTML += contact
+        let arrayItem = [name, number, email]
+        contactsArray.push(arrayItem)
+
+        if (document.getElementById('tableBody') != undefined){
+            let table = document.getElementById('tableBody');
+            table.innerHTML += contact
+        }
+        else if (document.getElementById('sortedTable') != undefined){
+            let table = document.getElementById('sortedTable');
+            table.innerHTML += contact
+        }
         
         document.getElementById('name').value = "";
         document.getElementById('number').value = "";
@@ -104,20 +103,17 @@ document.getElementById('add').addEventListener('click', function(){
         let nameOut= validateName(name)
         let numOut= validateNumber(number)
         let emailOut = validateEmail(email)
-        
-        if (nameOut){
-            nameErr.innerHTML = nameOut
+
+        if (nameOut != true){
+            nameErr.innerHTML += nameOut
         }
-        if (!numOut){
-            numErr.innerHTML = numOut
+        if (numOut != true){
+            numErr.innerHTML += numOut
         }
-        if (!emailOut){
-            emailErr.innerHTML = emailOut
+        if (emailOut != true){
+            emailErr.innerHTML += emailOut
         }
-    
-        document.getElementById('name').value = "";
-        document.getElementById('number').value = "";
-        document.getElementById('email').value = "";
+
         
     }
 })

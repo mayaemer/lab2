@@ -1,63 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <meta charset="UTF-8">    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phone Directory</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Phone Directory</h1>
 
-    <form id="addForm">
-        
-        <label>Contact Name:</label>
-        <input type="text" id='name'/>
-        
-        <label>Contact Number:</label>
-        <input type="text" id="number"/>
-      
-        <label>Contact Email:</label>
-        <input type="text" id="email"/>
-        <button id="add" type="submit">Add Contact</button>
+    <div id="container">
+      <div id="formDiv">
+        <form id="addForm">
+          <label>Contact Name:</label>
+          <input type="text" id="name" />
 
-    </form>
+          <label>Contact Number:</label>
+          <input type="text" id="number" />
 
-    <div id="validationError">
+          <label>Contact Email:</label>
+          <input type="text" id="email" />
+          <button id="add" type="submit">Add Contact</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="container">
         <p id="nameError"></p>
         <p id="numError"></p>
         <p id="emailError"></p>
     </div>
 
-    <form id="search">
-
+    <div id="container">
+      <form id="search">
         <label>Search contact by phone number</label>
-        <input type="text" id="searchbox" onkeyup="search()"/>
-
-    </form>
-
-    <div id="searchError">
-        <p>No results found</p>
+        <input type="text" id="searchbox" onkeyup="search()" />
+      </form>
     </div>
-    
-    <h2>Contacts Summary</h2>
-    <table id="contactsTable" class="sortable">
-        <thead>
-            <tr id="header">
-                <th id="nameHeader">Name</th>
-                <th>Mobile</th>
-                <th>Email</th>
-            </tr>
-        </thead>
-        <tbody id="tableBody">
-        </tbody>
-    </table>
-    
 
+    <div id="container">
+      <div id="searchError">
+        <p>No results found</p>
+      </div>
+    </div>
+
+    <div id="container">
+      <h2>Contacts Summary</h2>
+    </div>
+
+    <div id="container">
+      <table id="contactsTable" class="sortable">
+        <thead>
+          <tr id="header">
+            <th id="nameHeader">Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
 
     <script src="script.js"></script>
-   
-</body>
-
+  </body>
 </html>

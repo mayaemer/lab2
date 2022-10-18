@@ -1,3 +1,48 @@
+h1{
+    text-align: center;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+}
+
+#nameError, #numError, #emailError{
+    padding: 5px;
+}
+
+#searchError, #nameError, #numError, #emailError {
+    color: red;
+    font-weight: bold;
+}
+
+#formDiv {
+    border-radius: 25px;
+    border: solid 5px #007399;
+    background: #b3ecff;
+    padding: 20px; 
+    width: 50%;
+    height: 70px;
+    margin-top: 20px;
+    
+}
+
+#addForm {
+    text-align: center;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+  }
+
+table {
+    width: 25%;
+}
+
 tr:nth-child(odd) {
     background-color: #f2f2f2;
 }
