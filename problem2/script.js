@@ -6,6 +6,7 @@ async function listPosts() {
         const res = await fetch('http://jsonplaceholder.typicode.com/todos')
         // parse to json
         let posts = await res.json();
+        console.log(posts);
         // return titles from the post, and filter where titles have more than 6 words and print
         let title = posts.map(posts => posts.title);
         title
