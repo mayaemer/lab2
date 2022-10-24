@@ -47,8 +47,7 @@ async function wordFrequency(){
 
         // iterate through the map to print each key pair value
         let keys = Object.keys(freqMap);
-        console.log(keys)
-        //keys.forEach(key => console.log(key + ' is found ' + freqMap[key] + ' time(s)'));
+        keys.forEach(key => console.log(key + ' is found ' + freqMap[key] + ' time(s)'));
     }
     catch(error){
         console.log(error)
