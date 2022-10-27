@@ -2,7 +2,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 #userRepos {
     width: 80%;
     margin: auto;
@@ -11,6 +10,7 @@
     padding: 0.5em;
 }
 
+/*when scrollable class is assigned to table, it applys overflow to auto, and height*/
 .scrollable {
     height: 200px;
     overflow-x: auto;
