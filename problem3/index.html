@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Problem 3</title>
   </head>
   <body>
-
-    <div id="form">
+    <div id="searchForm">
+      <h2>Search for Github user..</h2>
       <form>
-        <input type="text" id='userName'/>
+        <input type="text" id="userName" />
         <button id="searchBtn">Search</button>
       </form>
     </div>
 
-    <div id="userProfile">
+    <div class="section">
+      <div id="userProfile">
         <h2>User Profile</h2>
-        <div id="infoSection">
-
+        <div id="avatarSection">
         </div>
+        <div id="infoSection">
+        </div>
+      </div>
     </div>
 
-    <div id="userRepos">
-        <h2>User Repos</h2>
-        <table id="repoTable">
-
-        </table>
+    <div class="section">
+      <h2>User Repos</h2>
+      <div id="userRepos">
+        <table id="repoTable"></table>
+      </div>
     </div>
-
 
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="script.js"></script>
